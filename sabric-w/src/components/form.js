@@ -13,8 +13,8 @@ function Form({ formHeading, buttonText, p1, link, p2, api }) {
   const inputName2 = "email";
   const inputName3 = "password";
   const inputType2 = "email";
-  const placeholder1 = "your name";
-  const placeholder2 = "your email";
+  const placeholder1 = "Your name";
+  const placeholder2 = "Your email";
   const textAreaPlaceholder = "password";
 
   const navigate = useNavigate();
