@@ -81,18 +81,18 @@ function Profile() {
 
   return (
     <div className="bg-white lg:bg-gray-200 h-full w-screen flex flex-col items-center p-0 text-base overflow-x-hidden">
-      <div className="w-full relative bottom-32 overflow-x-hidden">
+      <div className="w-full relative  overflow-x-hidden">
         <img
           src="./assets/artistic.jpeg"
           alt="artistic"
-          className="w-screen -rotate-90 lg:w-0"
+          className="w-screen lg:w-0"
         />
       </div>
       <div className="w-full flex flex-col justify-center items-center px-6 lg:h-screen lg:w-5/12 lg:bg-white">
-        <div className="w-46 lg:w-full py-6 relative bottom-[13rem] lg:bottom-6 flex flex-row justify-center items-center">
+        <div className="w-46 lg:w-full py-6 relative bottom-[8rem] lg:bottom-6 flex flex-row justify-center items-center">
           <Logo />
         </div>
-        <div className="w-full flex flex-row justify-between font-bold text-black relative bottom-48 lg:bottom-0 lg:mb-12 text-medium">
+        <div className="w-full flex flex-row justify-between font-bold text-black relative bottom-[3rem] lg:bottom-0 lg:mb-12 text-medium">
           <h1>Modify your profile</h1>
           <button
             className="underline capitalize cursor-pointer"
@@ -101,7 +101,7 @@ function Profile() {
             Edit
           </button>
         </div>
-        <div className="w-full flex flex-col justify-center items-center relative bottom-40 lg:bottom-0">
+        <div className="w-full flex flex-col justify-center items-center relative bottom-6 lg:bottom-0">
           <div className="w-full flex flex-col justify-center mb-10">
             <p className="capitalize text-left mb-2">username</p>
             <input
