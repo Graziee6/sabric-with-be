@@ -27,7 +27,7 @@ export const addUser = async (req, res) => {
       password: hashedPassword,
     });
     await newUser.save();
-    return res.status(200).send({ message: "User saved successfully!" });
+    return res.status(201).send({ message: "User saved successfully!" });
   } catch (error) {
     console.error(error);
   }

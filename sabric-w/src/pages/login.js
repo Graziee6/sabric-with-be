@@ -8,6 +8,7 @@ function login() {
   const buttonText = "login";
   const linkTo = "/signup";
   const loginApi = "http://localhost:4370/login";
+  const nextPage = "/profile";
   return (
     <div className="w-full justify-center m-auto align-middle items-center text-center bg-gray-100 flex flex-col flex-grow">
       <Form
@@ -15,7 +16,9 @@ function login() {
         p1={p1}
         p2={p2}
         link={linkTo}
-        buttonText={buttonText} api={loginApi}
+        buttonText={buttonText}
+        api={loginApi}
+        nextPage={nextPage}
       />
     </div>
   );

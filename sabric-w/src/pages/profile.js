@@ -106,7 +106,7 @@ function Profile() {
             <p className="capitalize text-left mb-2">username</p>
             <input
               type="text"
-              className="capitalize px-5 py-1 bg-gray-200 font-bold rounded-md"
+              className="px-5 py-1 bg-gray-200 font-bold rounded-md"
               required
               defaultValue={username}
               onChange={handleChange}

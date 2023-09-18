@@ -7,7 +7,7 @@ import Logo from "../components/logo";
 import { showToast } from "./functions";
 import { useNavigate } from "react-router-dom";
 
-function Form({ formHeading, buttonText, p1, link, p2, api }) {
+function Form({ formHeading, buttonText, p1, link, p2, api, nextPage }) {
   const inputType1 = "text";
   const inputName1 = "username";
   const inputName2 = "email";
@@ -32,7 +32,6 @@ function Form({ formHeading, buttonText, p1, link, p2, api }) {
     });
   };
 
-
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
@@ -48,7 +47,6 @@ function Form({ formHeading, buttonText, p1, link, p2, api }) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          
         },
         body: JSON.stringify(formData),
       });
@@ -60,13 +58,16 @@ function Form({ formHeading, buttonText, p1, link, p2, api }) {
       if (!response.ok) {
         throw new Error("Login failed");
       }
-      let jwtToken = data.data;
-      localStorage.setItem("jwtToken", jwtToken);
+
+      if (nextPage === "/profile") {
+        let jwtToken = data.data;
+        localStorage.setItem("jwtToken", jwtToken);
+      }
       localStorage.setItem("username", data.user.username);
       localStorage.setItem("email", data.user.email);
       localStorage.setItem("password", data.user.password);
 
-      navigate("/profile");
+      navigate(nextPage);
     } catch (error) {
       console.error(error);
     }
