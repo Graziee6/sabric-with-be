@@ -80,7 +80,7 @@ function Profile() {
   };
 
   return (
-    <div className="bg-white lg:bg-gray-200 h-full w-screen flex flex-col items-center p-0 text-base overflow-x-hidden">
+    <div className="bg-white lg:bg-gray-200 h-full w-screen flex flex-col items-center p-0 text-base overflow-x-hidden md:text-lg">
       <div className="w-full relative  overflow-x-hidden">
         <img
           src="./assets/artistic.jpeg"

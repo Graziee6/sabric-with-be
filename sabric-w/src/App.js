@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Profile from "./pages/profile";
+import Users from "./pages/users";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" Component={Login} />
         <Route path="/signup" Component={Signup} />
         <Route exact path="/profile" Component={Profile} />
+        <Route exact path="/seeUsers" Component={Users} />
       </Routes>
       <React.Fragment>
         <ToastContainer />

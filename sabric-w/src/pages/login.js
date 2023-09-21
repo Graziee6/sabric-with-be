@@ -8,7 +8,7 @@ function login() {
   const buttonText = "login";
   const linkTo = "/signup";
   const loginApi = "http://localhost:4370/login";
-  const nextPage = "/profile";
+  const nextPage = "/seeUsers";
   return (
     <div className="w-full justify-center m-auto align-middle items-center text-center bg-gray-100 flex flex-col flex-grow">
       <Form

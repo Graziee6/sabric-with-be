@@ -13,9 +13,9 @@ function Form({ formHeading, buttonText, p1, link, p2, api, nextPage }) {
   const inputName2 = "email";
   const inputName3 = "password";
   const inputType2 = "email";
-  const placeholder1 = "your name";
-  const placeholder2 = "your email";
-  const textAreaPlaceholder = "password";
+  const placeholder1 = "Your name";
+  const placeholder2 = "Your email";
+  const textAreaPlaceholder = "Password";
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -59,7 +59,7 @@ function Form({ formHeading, buttonText, p1, link, p2, api, nextPage }) {
         throw new Error("Login failed");
       }
 
-      if (nextPage === "/profile") {
+      if (nextPage === "/seeUsers") {
         let jwtToken = data.data;
         localStorage.setItem("jwtToken", jwtToken);
       }
@@ -73,8 +73,15 @@ function Form({ formHeading, buttonText, p1, link, p2, api, nextPage }) {
     }
   };
 
+  const capitalize = (str) => {
+    let [firstChar, remainder] = str.split(0);
+    console.log(firstChar, remainder);
+    firstChar.toUpperCase();
+    return firstChar.concat(remainder);
+  };
+
   return (
-    <div className="w-11/12 md:w-9/12 md:min-h-screen flex flex-col justify-center lg:justify-start lg:items-start lg:text-start items-center text-center p-4 align-middle lg:align-top lg:w-full lg:flex-row lg:gap-6 lg:p-0">
+    <div className="w-11/12 md:w-9/12 md:min-h-screen flex flex-col justify-center lg:justify-start lg:items-start lg:text-start items-center text-center p-4 align-middle lg:align-top lg:w-full lg:flex-row lg:gap-6 lg:p-0 md:text-lg">
       <div className="w-0 lg:w-1/2 lg:min-h-screen">
         <img
           src="./assets/lg-bg-img.png"
